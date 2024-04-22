@@ -1,0 +1,23 @@
+<div class="Blog">
+<h1>Su blog de Ciberseguridad</h1>
+
+<p><button>Alta artículos</button></p>
+
+<img src="https://fotografias.larazon.es/clipping/cmsimages01/2023/12/26/6E62B32A-7CC6-40C5-A909-83B3B94BB1F2/5-senales-que-tus-cuentas-han-sido-comprometidas-segun-hacker_98.jpg?crop=661,372,x0,y1&width=1900&height=1069&optimize=low&format=webply"
+width="30%">
+
+
+<div class="contenedor">
+    @for (articulo of articulos; track articulo) {
+        <div class="columnaArticulo">
+            <div class="ArticuloX">
+                <img src="{{articulo.imagen}}">
+                <h5>{{articulo.nombre}}</h5>
+                <p>{{articulo.descripcion}}</p>
+                <a [routerLink]="['/Articulo', articulo.id]"><button>Más información</button></a>
+            </div>
+        </div>
+    }
+</div>
+
+</div>
